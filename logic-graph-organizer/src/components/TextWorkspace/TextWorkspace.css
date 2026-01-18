@@ -1,0 +1,324 @@
+.text-workspace {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+}
+
+.workspace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #e2e8f0;
+  background: white;
+}
+
+.workspace-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.toggle-input-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.toggle-input-btn:hover {
+  background: #f1f5f9;
+}
+
+.input-section {
+  padding: 12px;
+  border-bottom: 1px solid #e2e8f0;
+  background: white;
+}
+
+.text-input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 13px;
+  line-height: 1.5;
+  resize: vertical;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.input-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.split-btn {
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.split-btn.primary {
+  background: #3b82f6;
+  color: white;
+}
+
+.split-btn.primary:hover:not(:disabled) {
+  background: #2563eb;
+}
+
+.split-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.char-count {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.segments-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.segments-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.segment-count {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.segment-actions {
+  display: flex;
+  gap: 4px;
+}
+
+.segment-actions button {
+  padding: 4px 8px;
+  font-size: 11px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  background: white;
+  cursor: pointer;
+  color: #64748b;
+}
+
+.segment-actions button:hover:not(:disabled) {
+  background: #f1f5f9;
+}
+
+.segment-actions button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.segment-actions button.danger:hover:not(:disabled) {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #dc2626;
+}
+
+.segments-list {
+  flex: 1;
+  overflow: hidden;
+}
+
+.empty-segments {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  color: #94a3b8;
+}
+
+.empty-segments p {
+  margin: 4px 0;
+}
+
+.empty-segments .hint {
+  font-size: 12px;
+}
+
+/* Segment Card */
+.segment-card {
+  margin: 8px 12px;
+  padding: 10px 12px;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.segment-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.segment-card.selected {
+  border-color: #3b82f6;
+  background: #eff6ff;
+}
+
+.segment-card.highlighted {
+  border-color: #f59e0b;
+  background: #fffbeb;
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2);
+}
+
+.segment-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.segment-header input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.segment-meta {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.meta-badge {
+  padding: 2px 6px;
+  font-size: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+.meta-badge.version {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.meta-badge.source {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.meta-badge.date {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.edit-btn {
+  padding: 4px 8px;
+  font-size: 12px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #94a3b8;
+  border-radius: 4px;
+}
+
+.edit-btn:hover {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.segment-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #334155;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-height: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.segment-edit textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #e2e8f0;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  resize: vertical;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.edit-actions button {
+  padding: 4px 12px;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.edit-actions .save-btn {
+  background: #3b82f6;
+  color: white;
+}
+
+.edit-actions .save-btn:hover {
+  background: #2563eb;
+}
+
+.edit-actions .cancel-btn {
+  background: #f1f5f9;
+  color: #64748b;
+}
+
+.edit-actions .cancel-btn:hover {
+  background: #e2e8f0;
+}
+
+.segment-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.segment-tags .tag {
+  padding: 2px 6px;
+  font-size: 10px;
+  background: #f1f5f9;
+  color: #64748b;
+  border-radius: 4px;
+}
