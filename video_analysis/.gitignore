@@ -1,4 +1,6 @@
-# 取帧工作文件体积大（数百MB），不入库；只保留拆解报告 .md
+# 帧图/网格图/慢放图等中间产物（体积大，可由脚本重新生成）
 */frames_1s/
 */sheets/
 */detail/
+replication/frames/
+replication/check.png
